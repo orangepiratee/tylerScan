@@ -6,7 +6,6 @@ def portScan(port='554',ip='1.1.110.0/24'):
     fname = 'data/{}_{}.txt'.format(port, ip.replace('.', '_').replace('/', '_'))
     command = 'zmap -B 10M -p {} {} -o {}'.format(port,ip,fname)
     text = os.popen(command)
-    print('finished')
     #save2txt(text,fname)
 
 if __name__ == '__main__':
