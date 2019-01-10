@@ -1,10 +1,11 @@
 import time
+from __future__ import absolute_import, unicode_literals
 from celery import Celery
 
 brokerUrl = 'amqp://admin:admin@localhost:5672/myvhost'
-backendUrl = 'amqp://127.0.0.1:15672'
+backendUrl = 'redis://127.0.0.1:6379'
 
-app = Celery('tasks',broker=brokerUrl)
+app = Celery('tasks',broker=brokerUrl,backend=backendUrl)
 
 @app.task
 def add(x,y):
