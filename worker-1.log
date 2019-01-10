@@ -1,0 +1,12 @@
+[2019-01-10 04:05:57,145: INFO/ForkPoolWorker-1] Task tasks.add[38283886-db6c-4453-8e37-8b2119f96432] succeeded in 0.004703980999920532s: 5
+[2019-01-10 04:06:16,557: INFO/ForkPoolWorker-1] Task tasks.mul[aa110175-0803-44b9-87bc-90cfcac308c2] succeeded in 0.0027538360000107787s: 1476
+[2019-01-10 04:06:36,031: ERROR/ForkPoolWorker-1] Task tasks.xsum[e7a98494-4717-4b24-95ee-a912983bb230] raised unexpected: TypeError("'int' object is not iterable",)
+Traceback (most recent call last):
+  File "/home/tylerscope/.local/lib/python3.6/site-packages/celery/app/trace.py", line 382, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/tylerscope/.local/lib/python3.6/site-packages/celery/app/trace.py", line 641, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/tylerscope/PycharmProjects/tylerScan/tasks.py", line 14, in xsum
+    return sum(numbers)
+TypeError: 'int' object is not iterable
+[2019-01-10 04:06:44,156: INFO/ForkPoolWorker-1] Task tasks.add[fddd7530-9898-4e87-93ee-43e29daeaf4f] succeeded in 0.0014932019998923352s: 246

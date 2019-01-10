@@ -1,0 +1,8 @@
+[2019-01-10 04:05:22,652: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2019-01-10 04:05:22,661: INFO/MainProcess] mingle: searching for neighbors
+[2019-01-10 04:05:23,690: INFO/MainProcess] mingle: all alone
+[2019-01-10 04:05:23,733: INFO/MainProcess] worker@ubuntu ready.
+[2019-01-10 04:05:57,138: INFO/MainProcess] Received task: tasks.add[38283886-db6c-4453-8e37-8b2119f96432]  
+[2019-01-10 04:06:16,550: INFO/MainProcess] Received task: tasks.mul[aa110175-0803-44b9-87bc-90cfcac308c2]  
+[2019-01-10 04:06:36,023: INFO/MainProcess] Received task: tasks.xsum[e7a98494-4717-4b24-95ee-a912983bb230]  
+[2019-01-10 04:06:44,152: INFO/MainProcess] Received task: tasks.add[fddd7530-9898-4e87-93ee-43e29daeaf4f]  
