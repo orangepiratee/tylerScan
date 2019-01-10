@@ -1,11 +1,13 @@
 #!/usr/bin/env python
-from __future__ import absolute_import
+from __future__ import absolute_import, unicode_literals
 from celery import Celery
 
-brokerUrl = 'amqp://administrator:admin@localhost:5672/myvhost'
+brokerUrl = 'amqp://admin:admin@localhost:5672/myvhost'
 backendUrl = 'redis://localhost:6379'
-app = Celery('pj',broker=brokerUrl,backend=backendUrl,include=['tylerScan.tasks'])
+app = Celery('pj',broker=brokerUrl,backend=backendUrl,include=['tasks'])
 
-app.config_from_object('tylerScan.celeryConfig')
+#app.config_from_object('pj.celeryConfig')
+app.conf.update(result_expires=3600,)
 
-if
+if __name__ == '__main__':
+    app.start()
