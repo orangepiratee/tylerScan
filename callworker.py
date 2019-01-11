@@ -1,4 +1,0 @@
-from tasks import add
-from celery import Celery
-
-add.delay(3,4)
