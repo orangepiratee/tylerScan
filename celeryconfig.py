@@ -14,5 +14,3 @@ CELERY_QUEUES = (
 
 
 )
-
-from kombu import Queue

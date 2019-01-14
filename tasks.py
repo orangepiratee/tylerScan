@@ -1,5 +1,5 @@
 from __future__ import absolute_import, unicode_literals
-from tylerscan import app
+from tylerscope import app
 import os
 
 @app.task
