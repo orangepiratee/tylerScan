@@ -7,7 +7,7 @@ def add(x,y):
     return x+y
 
 @app.task
-def mul(x,y):
+def multiply(x,y):
     return x*y
 
 @app.task

@@ -6,7 +6,7 @@ import time
 
 sys.path.append(os.path.abspath("."))
 
-app = Celery('tylerscope',include=['tasks'])
+app = Celery('tasks',include=['tasks'])
 app.config_from_object('celeryconfig')
 
 def my_decorator(func):
@@ -20,6 +20,5 @@ def my_decorator(func):
 def infoo():
     print('nh.....')
 
-infoo()
-#if __name__ == '__main__':
-#    app.start()
+if __name__ == '__main__':
+    app.start()
