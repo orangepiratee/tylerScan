@@ -3,9 +3,9 @@ from __future__ import absolute_import, unicode_literals
 from celery import Celery
 
 
-app = Celery('portScan',include=['tasks'])
+app = Celery('tylerScan',include=['tylerScan.tasks'])
 
-app.config_from_object('celeryconfig')
+app.config_from_object('tylerScan.celeryconfig')
 
 
 if __name__ == '__main__':
