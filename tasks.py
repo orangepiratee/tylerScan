@@ -26,7 +26,8 @@ def portScan(port='554',ip='1.1.110.0/24'):
         fname = 'data/{}_{}.txt'.format(port, ip.replace('.', '_').replace('/', '_'))
         command = 'zmap -B 10M -p {} {} -o {}'.format(port,ip,fname)
         text = os.popen(command)
+        text.close()
         return 0
-    except:
+    except :
         return 1
     #save2txt(text,fname)

@@ -2,8 +2,8 @@
 
 from tasks import *
 
-for i in range(120,125):
+for i in range(100,111):
     #add.delay(i,i)
     #multiply.delay(i,i)
     ip = '1.1.{}.0/24'.format(i)
-    portScan.delay('554',ip)
+    portScan.delay('80',ip)
